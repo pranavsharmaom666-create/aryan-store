@@ -5,13 +5,13 @@
   <title>Aryan Store</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header>
   <div class="logo">AryanStore</div>
   <input type="text" placeholder="Search products..." onkeyup="searchProduct(this.value)">
   <button onclick="viewCart()">Cart (<span id="cart-count">0</span>)</button>
-  <button onclick="goLogin()">Login</button>
 </header>
 
 <div class="banner">
@@ -20,8 +20,7 @@
 
 <div class="products">
 
-  <!-- PRODUCT TEMPLATE -->
-  
+  <!-- PRODUCT -->
   <div class="product" onclick="showDetails('T-Shirt',499,'⭐⭐⭐⭐☆')">
     <img src="https://picsum.photos/200">
     <h3>T-Shirt</h3>
@@ -70,41 +69,9 @@
     <button onclick="event.stopPropagation(); addToCart('Laptop',45999)">Add to Cart</button>
   </div>
 
-  <div class="product" onclick="showDetails('Bag',999,'⭐⭐⭐⭐☆')">
-    <img src="https://picsum.photos/206">
-    <h3>Bag</h3>
-    <p>₹999</p>
-    <p>⭐⭐⭐⭐☆</p>
-    <button onclick="event.stopPropagation(); addToCart('Bag',999)">Add to Cart</button>
-  </div>
-
-  <div class="product" onclick="showDetails('Smart TV',25999,'⭐⭐⭐⭐⭐')">
-    <img src="https://picsum.photos/207">
-    <h3>Smart TV</h3>
-    <p>₹25999</p>
-    <p>⭐⭐⭐⭐⭐</p>
-    <button onclick="event.stopPropagation(); addToCart('Smart TV',25999)">Add to Cart</button>
-  </div>
-
-  <div class="product" onclick="showDetails('Speaker',1999,'⭐⭐⭐⭐☆')">
-    <img src="https://picsum.photos/208">
-    <h3>Bluetooth Speaker</h3>
-    <p>₹1999</p>
-    <p>⭐⭐⭐⭐☆</p>
-    <button onclick="event.stopPropagation(); addToCart('Speaker',1999)">Add to Cart</button>
-  </div>
-
-  <div class="product" onclick="showDetails('Power Bank',899,'⭐⭐⭐⭐☆')">
-    <img src="https://picsum.photos/209">
-    <h3>Power Bank</h3>
-    <p>₹899</p>
-    <p>⭐⭐⭐⭐☆</p>
-    <button onclick="event.stopPropagation(); addToCart('Power Bank',899)">Add to Cart</button>
-  </div>
-
 </div>
 
-<!-- ✅ PRODUCT DETAIL POPUP -->
+<!-- PRODUCT DETAIL POPUP -->
 <div id="product-detail" style="display:none; position:fixed; top:20%; left:20%; background:white; padding:20px; border:2px solid black;">
   <h2 id="detail-name"></h2>
   <p id="detail-price"></p>
@@ -115,4 +82,4 @@
 <script src="script.js"></script>
 
 </body>
-    </html>
+  </html>
