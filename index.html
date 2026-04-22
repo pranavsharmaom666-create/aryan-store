@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Aryan Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">AryanStore</div>
+  <input type="text" placeholder="Search products..." onkeyup="searchProduct(this.value)">
+  <button onclick="viewCart()">Cart (<span id="cart-count">0</span>)</button>
+  <button onclick="goLogin()">Login</button>
+</header>
+
+<div class="banner">
+  <h1>Welcome to Aryan Store</h1>
+</div>
+
+<div class="products">
+
+  <div class="product">
+    <img src="https://picsum.photos/200">
+    <h3>T-Shirt</h3>
+    <p>₹499</p>
+    <p>⭐⭐⭐⭐☆</p>
+    <button onclick="addToCart('T-Shirt',499)">Add to Cart</button>
+    <button onclick="addToWishlist('T-Shirt')">❤️ Wishlist</button>
+  </div>
+
+  <div class="product">
+    <img src="https://picsum.photos/201">
+    <h3>Shoes</h3>
+    <p>₹999</p>
+    <p>⭐⭐⭐⭐⭐</p>
+    <button onclick="addToCart('Shoes',999)">Add to Cart</button>
+    <button onclick="addToWishlist('Shoes')">❤️ Wishlist</button>
+  </div>
+
+  <div class="product">
+    <img src="https://picsum.photos/202">
+    <h3>Watch</h3>
+    <p>₹1499</p>
+    <p>⭐⭐⭐⭐☆</p>
+    <button onclick="addToCart('Watch',1499)">Add to Cart</button>
+    <button onclick="addToWishlist('Watch')">❤️ Wishlist</button>
+  </div>
+
+  <div class="product">
+    <img src="https://picsum.photos/203">
+    <h3>Headphones</h3>
+    <p>₹799</p>
+    <p>⭐⭐⭐☆☆</p>
+    <button onclick="addToCart('Headphones',799)">Add to Cart</button>
+    <button onclick="addToWishlist('Headphones')">❤️ Wishlist</button>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>

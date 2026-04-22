@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+  
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Your Cart</h1>
+<div id="cart-items"></div>
+
+<button onclick="goCheckout()">Checkout</button>
+
+<script>
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let container = document.getElementById("cart-items");
+
+let total = 0;
+
+cart.forEach((item, index) => {
+  let p = document.createElement("p");
+  p.innerText = item.name + " - ₹" + item.price;
+
+  let btn = document.createElement("button");
+  btn.innerText = "Remove";
+  btn.onclick = function() {
+    cart.splice(index,1);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    location.reload();
+  };
+
+  container.appendChild(p);
+  container.appendChild(btn);
+  total += item.price;
+});
+
+let t = document.createElement("h2");
+t.innerText = "Total: ₹" + total;
+container.appendChild(t);
+
+function goCheckout() {
+  window.location.href = "checkout.html";
+}
+</script>
+
+</body>
+</html>
