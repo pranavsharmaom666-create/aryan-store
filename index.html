@@ -20,46 +20,99 @@
 
 <div class="products">
 
-  <div class="product">
+  <!-- PRODUCT TEMPLATE -->
+  
+  <div class="product" onclick="showDetails('T-Shirt',499,'⭐⭐⭐⭐☆')">
     <img src="https://picsum.photos/200">
     <h3>T-Shirt</h3>
     <p>₹499</p>
     <p>⭐⭐⭐⭐☆</p>
-    <button onclick="addToCart('T-Shirt',499)">Add to Cart</button>
-    <button onclick="addToWishlist('T-Shirt')">❤️ Wishlist</button>
+    <button onclick="event.stopPropagation(); addToCart('T-Shirt',499)">Add to Cart</button>
   </div>
 
-  <div class="product">
+  <div class="product" onclick="showDetails('Shoes',999,'⭐⭐⭐⭐⭐')">
     <img src="https://picsum.photos/201">
     <h3>Shoes</h3>
     <p>₹999</p>
     <p>⭐⭐⭐⭐⭐</p>
-    <button onclick="addToCart('Shoes',999)">Add to Cart</button>
-    <button onclick="addToWishlist('Shoes')">❤️ Wishlist</button>
+    <button onclick="event.stopPropagation(); addToCart('Shoes',999)">Add to Cart</button>
   </div>
 
-  <div class="product">
+  <div class="product" onclick="showDetails('Watch',1499,'⭐⭐⭐⭐☆')">
     <img src="https://picsum.photos/202">
     <h3>Watch</h3>
     <p>₹1499</p>
     <p>⭐⭐⭐⭐☆</p>
-    <button onclick="addToCart('Watch',1499)">Add to Cart</button>
-    <button onclick="addToWishlist('Watch')">❤️ Wishlist</button>
+    <button onclick="event.stopPropagation(); addToCart('Watch',1499)">Add to Cart</button>
   </div>
 
-  <div class="product">
+  <div class="product" onclick="showDetails('Headphones',799,'⭐⭐⭐☆☆')">
     <img src="https://picsum.photos/203">
     <h3>Headphones</h3>
     <p>₹799</p>
     <p>⭐⭐⭐☆☆</p>
-    <button onclick="addToCart('Headphones',799)">Add to Cart</button>
-    <button onclick="addToWishlist('Headphones')">❤️ Wishlist</button>
+    <button onclick="event.stopPropagation(); addToCart('Headphones',799)">Add to Cart</button>
+  </div>
+
+  <div class="product" onclick="showDetails('Mobile',12999,'⭐⭐⭐⭐☆')">
+    <img src="https://picsum.photos/204">
+    <h3>Mobile</h3>
+    <p>₹12999</p>
+    <p>⭐⭐⭐⭐☆</p>
+    <button onclick="event.stopPropagation(); addToCart('Mobile',12999)">Add to Cart</button>
+  </div>
+
+  <div class="product" onclick="showDetails('Laptop',45999,'⭐⭐⭐⭐⭐')">
+    <img src="https://picsum.photos/205">
+    <h3>Laptop</h3>
+    <p>₹45999</p>
+    <p>⭐⭐⭐⭐⭐</p>
+    <button onclick="event.stopPropagation(); addToCart('Laptop',45999)">Add to Cart</button>
+  </div>
+
+  <div class="product" onclick="showDetails('Bag',999,'⭐⭐⭐⭐☆')">
+    <img src="https://picsum.photos/206">
+    <h3>Bag</h3>
+    <p>₹999</p>
+    <p>⭐⭐⭐⭐☆</p>
+    <button onclick="event.stopPropagation(); addToCart('Bag',999)">Add to Cart</button>
+  </div>
+
+  <div class="product" onclick="showDetails('Smart TV',25999,'⭐⭐⭐⭐⭐')">
+    <img src="https://picsum.photos/207">
+    <h3>Smart TV</h3>
+    <p>₹25999</p>
+    <p>⭐⭐⭐⭐⭐</p>
+    <button onclick="event.stopPropagation(); addToCart('Smart TV',25999)">Add to Cart</button>
+  </div>
+
+  <div class="product" onclick="showDetails('Speaker',1999,'⭐⭐⭐⭐☆')">
+    <img src="https://picsum.photos/208">
+    <h3>Bluetooth Speaker</h3>
+    <p>₹1999</p>
+    <p>⭐⭐⭐⭐☆</p>
+    <button onclick="event.stopPropagation(); addToCart('Speaker',1999)">Add to Cart</button>
+  </div>
+
+  <div class="product" onclick="showDetails('Power Bank',899,'⭐⭐⭐⭐☆')">
+    <img src="https://picsum.photos/209">
+    <h3>Power Bank</h3>
+    <p>₹899</p>
+    <p>⭐⭐⭐⭐☆</p>
+    <button onclick="event.stopPropagation(); addToCart('Power Bank',899)">Add to Cart</button>
   </div>
 
 </div>
 
+<!-- ✅ PRODUCT DETAIL POPUP -->
+<div id="product-detail" style="display:none; position:fixed; top:20%; left:20%; background:white; padding:20px; border:2px solid black;">
+  <h2 id="detail-name"></h2>
+  <p id="detail-price"></p>
+  <p id="detail-rating"></p>
+  <button onclick="closeDetails()">Close</button>
+</div>
+
 <script src="script.js"></script>
+
 </body>
-</html>
-<link rel="stylesheet" href="style.css">
-<script src="script.js"></script>
+    </html>
