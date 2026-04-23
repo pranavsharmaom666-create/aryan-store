@@ -1,15 +1,23 @@
+// Cart Load
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
+// Add to Cart
 function addToCart(name, price) {
   cart.push({ name, price });
   localStorage.setItem("cart", JSON.stringify(cart));
-  document.getElementById("cart-count").innerText = cart.length;
+  
+  let count = document.getElementById("cart-count");
+  if (count) {
+    count.innerText = cart.length;
+  }
 }
 
+// Go to Cart Page
 function viewCart() {
   window.location.href = "cart.html";
 }
 
+// Search Function
 function searchProduct(value) {
   let products = document.querySelectorAll(".product");
 
@@ -19,17 +27,16 @@ function searchProduct(value) {
   });
 }
 
+// Page Load (safe)
 window.onload = function () {
-  document.getElementById("cart-count").innerText = cart.length;
+  let count = document.getElementById("cart-count");
+  if (count) {
+    count.innerText = cart.length;
+  }
 };
 
-function showDetails(name, price, rating) {
-  document.getElementById("product-detail").style.display = "block";
-  document.getElementById("detail-name").innerText = name;
-  document.getElementById("detail-price").innerText = "Price: ₹" + price;
-  document.getElementById("detail-rating").innerText = "Rating: " + rating;
+// 🔥 NEW: Go to Product Page
+function goToProduct(name, price, rating) {
+  localStorage.setItem("product", JSON.stringify({ name, price, rating }));
+  window.location.href = "product.html";
 }
-
-function closeDetails() {
-  document.getElementById("product-detail").style.display = "none";
-      }
