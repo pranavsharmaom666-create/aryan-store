@@ -2,7 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Aryan Store</title>
+
+  <!-- Mobile Responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Aryan Store - Online Shopping</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -10,8 +14,14 @@
 
 <header>
   <div class="logo">AryanStore</div>
+
   <input type="text" placeholder="Search products..." onkeyup="searchProduct(this.value)">
-  <button onclick="viewCart()">Cart (<span id="cart-count">0</span>)</button>
+
+  <div>
+    <button onclick="location.href='index.html'">Home</button>
+    <button onclick="location.href='login.html'">Login</button>
+    <button onclick="viewCart()">Cart (<span id="cart-count">0</span>)</button>
+  </div>
 </header>
 
 <div class="banner">
@@ -22,50 +32,62 @@
 
   <!-- PRODUCT -->
   <div class="product" onclick="goToProduct('T-Shirt',499,'⭐⭐⭐⭐☆')">
-    <img src="https://picsum.photos/200">
+    <img src="https://m.media-amazon.com/images/I/61bK6PMOC3L._UY679_.jpg" alt="T-Shirt">
     <h3>T-Shirt</h3>
     <p>₹499</p>
     <p>⭐⭐⭐⭐☆</p>
+
+    <button onclick="event.stopPropagation(); goToProduct('T-Shirt',499,'⭐⭐⭐⭐☆')">View</button>
     <button onclick="event.stopPropagation(); addToCart('T-Shirt',499)">Add to Cart</button>
   </div>
 
   <div class="product" onclick="goToProduct('Shoes',999,'⭐⭐⭐⭐⭐')">
-    <img src="https://picsum.photos/201">
+    <img src="https://m.media-amazon.com/images/I/71li-ujtlUL._UY695_.jpg" alt="Shoes">
     <h3>Shoes</h3>
     <p>₹999</p>
     <p>⭐⭐⭐⭐⭐</p>
+
+    <button onclick="event.stopPropagation(); goToProduct('Shoes',999,'⭐⭐⭐⭐⭐')">View</button>
     <button onclick="event.stopPropagation(); addToCart('Shoes',999)">Add to Cart</button>
   </div>
 
   <div class="product" onclick="goToProduct('Watch',1499,'⭐⭐⭐⭐☆')">
-    <img src="https://picsum.photos/202">
+    <img src="https://m.media-amazon.com/images/I/61y2VVWcGBL._UY679_.jpg" alt="Watch">
     <h3>Watch</h3>
     <p>₹1499</p>
     <p>⭐⭐⭐⭐☆</p>
+
+    <button onclick="event.stopPropagation(); goToProduct('Watch',1499,'⭐⭐⭐⭐☆')">View</button>
     <button onclick="event.stopPropagation(); addToCart('Watch',1499)">Add to Cart</button>
   </div>
 
   <div class="product" onclick="goToProduct('Headphones',799,'⭐⭐⭐☆☆')">
-    <img src="https://picsum.photos/203">
+    <img src="https://m.media-amazon.com/images/I/61CGHv6kmWL._SL1500_.jpg" alt="Headphones">
     <h3>Headphones</h3>
     <p>₹799</p>
     <p>⭐⭐⭐☆☆</p>
+
+    <button onclick="event.stopPropagation(); goToProduct('Headphones',799,'⭐⭐⭐☆☆')">View</button>
     <button onclick="event.stopPropagation(); addToCart('Headphones',799)">Add to Cart</button>
   </div>
 
   <div class="product" onclick="goToProduct('Mobile',12999,'⭐⭐⭐⭐☆')">
-    <img src="https://picsum.photos/204">
+    <img src="https://m.media-amazon.com/images/I/61-r9zOKBCL._SX679_.jpg" alt="Mobile">
     <h3>Mobile</h3>
     <p>₹12999</p>
     <p>⭐⭐⭐⭐☆</p>
+
+    <button onclick="event.stopPropagation(); goToProduct('Mobile',12999,'⭐⭐⭐⭐☆')">View</button>
     <button onclick="event.stopPropagation(); addToCart('Mobile',12999)">Add to Cart</button>
   </div>
 
   <div class="product" onclick="goToProduct('Laptop',45999,'⭐⭐⭐⭐⭐')">
-    <img src="https://picsum.photos/205">
+    <img src="https://m.media-amazon.com/images/I/71jG+e7roXL._SX679_.jpg" alt="Laptop">
     <h3>Laptop</h3>
     <p>₹45999</p>
     <p>⭐⭐⭐⭐⭐</p>
+
+    <button onclick="event.stopPropagation(); goToProduct('Laptop',45999,'⭐⭐⭐⭐⭐')">View</button>
     <button onclick="event.stopPropagation(); addToCart('Laptop',45999)">Add to Cart</button>
   </div>
 
@@ -74,4 +96,4 @@
 <script src="script.js"></script>
 
 </body>
-</html>
+               </html>
